@@ -1,0 +1,164 @@
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: stretch;
+    justify-content: center;
+    margin: 100px 20% 0px 20%;
+}
+
+.progress-container {
+    background-color: #f6f6ee;
+    border-radius: 20px;
+    padding: 20px;
+    cursor: default;
+}
+
+body.dark-mode .progress-container {
+    background-color: #72726e;
+}
+
+.completed-sections {
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: #6a6a6a;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+body.dark-mode .completed-sections {
+    color: #aaaaaa;
+}
+
+.sections-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: right;
+}
+
+.section {
+    display: flex;
+    align-items: center;
+}
+
+/* Section name labels (e.g., "Performance", "Lifestyle") */
+.section-name {
+    font-size: 12px;
+    font-weight: 500;
+    color: #7a7a7a; /* Default muted gray for inactive states */
+    text-align: right;
+    width: 110px; /* Fixed width ensures bars align perfectly */
+    margin-right: 15px;
+}
+
+body.dark-mode .section-name {
+    color: #e2e2e2;
+}
+
+.progress-bar {
+    flex-grow: 1; 
+    height: 5px;
+    background-color: #dddddd;
+    border-radius: 3px;
+    margin-right: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.progress-bar::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: var(--progress, 0%); 
+    background-color: #1a1a1a; 
+    border-radius: 3px;
+    transition: width 0.3s ease;
+}
+
+.back > div {
+    font-size: 14px;
+    color: #888;
+    cursor: pointer;
+    transition: all 200ms ease;
+    display: inline;
+}
+
+.questions, .options {
+    display: flex;
+    flex-direction: column;
+}
+
+.options {
+    gap: 10px;
+}
+
+.questions {
+    gap: 15px
+}
+
+.question-heading {
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 38px;
+}
+
+.question-description {
+    font-size: 14px;
+    color: #888;
+}
+
+.options > div {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #888;
+    transition: all 200ms ease;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.options > div:hover {
+    border-color: black;
+    background-color: rgb(249, 250, 242);
+}
+
+body.dark-mode .options > div:hover {
+    color: black;
+    background-color: rgb(249, 250, 242);
+}
+
+.back > div:hover {
+    color: black;
+}
+
+body.dark-mode .back > div:hover {
+    color: rgb(230, 230, 230);
+}
+
+.numerical-option {
+    background-color: transparent;
+    padding: 12px;
+    border: 1px solid #888;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+body.dark-mode .numerical-option {
+    color: white;
+}
+
+.numerical-option::-webkit-outer-spin-button,
+.numerical-option::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+@media (max-width: 480px) {
+    main {
+        margin: 100px 0px 0px 0px;
+    }
+}

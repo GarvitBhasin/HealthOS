@@ -1,0 +1,135 @@
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.heading {
+    margin-bottom: 32px;
+    font-size: 36px;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 350px;
+}
+
+input[type="email"],
+input[type="password"] {
+    padding: 12px 15px;
+    border: 2px solid black;
+    background-color: transparent;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: all 300ms ease;
+}
+
+input::placeholder {
+    color: rgb(150, 150, 150);
+}
+
+input:focus {
+    outline: none;
+    border-color: rgb(100, 100, 100);
+}
+
+body.dark-mode input {
+    border-color: white;
+    color: white;
+}
+
+body.dark-mode input:focus {
+    border-color: rgb(200, 200, 200);
+}
+
+.form-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+
+/* Checkbox */
+input[type="checkbox"] {
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    padding: 0;
+    border: 2px solid black;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-grid;
+    place-content: center;
+    margin-right: 8px;
+}
+
+input[type="checkbox"]::before {
+    content: "✓";
+    font-size: 12px;
+    color: white;
+    transform: scale(0);
+    transition: 150ms ease;
+}
+
+input[type="checkbox"]:checked {
+    background-color: black;
+}
+
+input[type="checkbox"]:checked::before {
+    transform: scale(1);
+}
+
+body.dark-mode input[type="checkbox"] {
+    border-color: white;
+}
+
+body.dark-mode input[type="checkbox"]:checked {
+    background-color: white;
+}
+
+body.dark-mode input[type="checkbox"]:checked::before {
+    color: black;
+}
+
+.password-reset {
+    color: rgb(150, 150, 150);
+    transition: all 300ms ease;
+    cursor: pointer;
+}
+
+.reset-unresponsive {
+    pointer-events: none;
+}
+
+.password-reset:hover {
+    color: black;
+}
+
+body.dark-mode .password-reset:hover {
+    color: white;
+}
+
+.blue-link {
+    color: rgb(70, 120, 255);
+}
+
+.blue-link:hover {
+    opacity: 0.8;
+}
+
+.form-container .black-fill-button {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+@media (max-width: 480px) {
+    .heading {
+        line-height: 42px;
+    }
+}

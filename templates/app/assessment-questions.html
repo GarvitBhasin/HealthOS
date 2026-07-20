@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>HealthOS | Assessment</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/static/css/general.css">
+        <link rel="stylesheet" href="/static/css/assessment-questions.css">
+        <link rel="icon" type="image/png" href="/static/images/HealthOS-logo.png">
+    </head>
+    <body>
+        <nav>
+            <div class="nav-left">
+                <img src="/static/images/HealthOS-logo.png" alt="healthos logo" width="55px" height="55px" class="logo">
+                <a href="/">
+                    <div>
+                        Home
+                    </div>
+                </a>
+               <a href="/results">
+                    <div>
+                        Results
+                    </div>
+                </a>
+                <a href="/dashboard">
+                    <div>
+                        Dashboard
+                    </div>
+                </a>
+            </div>
+            <div class="nav-right">
+                <div class="theme-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="moon-icon" viewBox="0 0 16 16">
+                        <path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278M4.858 1.311A7.27 7.27 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.32 7.32 0 0 0 5.205-2.162q-.506.063-1.029.063c-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286"/>
+                    </svg>
+                </div>
+                <div class="no-account-buttons">
+                    <a href="/sign-up">
+                        <button class="black-fill-button">
+                            Sign Up
+                        </button>
+                    </a>
+                    <a href="/login">
+                        <button class="black-outline-button">
+                            Login
+                        </button>
+                    </a>
+                </div>
+                <div class="my-account-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+                    </svg>
+                    <div class="account-dropdown">
+                        <div class="user-email"></div>
+                        <hr>
+                        <a href="/user-settings">
+                            <button class="black-fill-button js-settings-button">Settings</button>
+                        </a>
+                        <button class="black-fill-button js-logout-button">Logout</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <main>
+            <div class="error-message"></div>
+            <div class="success-message"></div>
+            <div class="loading-button">
+                <span class="spinner"></span>
+            </div>
+            <div class="progress-container">
+                <div class="completed-sections">
+                    0 of 5 completed
+                </div>
+                <div class="sections-container">
+                    <div class="section">
+
+                    </div>
+                </div>
+            </div>
+            <div class="questions">
+                <div class="question-heading">
+                </div>
+                <div class="question-description">
+                </div>
+                <div class="options">
+                </div>
+            </div>
+            <div class="back">
+                <div>
+                    &#x2190; Back
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div>
+                <div>
+                    <a href="https://garvitbhasin.netlify.app" target="_blank">
+                        Garvit Bhasin
+                    </a>
+                </div>
+                <div>
+                    <a href="/faq">
+                        FAQ
+                    </a>
+                </div>
+            </div>
+            <img src="/static/images/HealthOS-logo.png" alt="healthos logo" width="55px" height="55px" class="footer-logo">
+        </footer>
+        <script type="module" src="/static/js/general.js"></script>
+        <script type="module" src="/static/js/assessment-questions.js"></script>
+    </body>
+</html>

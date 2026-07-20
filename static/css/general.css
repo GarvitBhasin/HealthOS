@@ -1,0 +1,293 @@
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: rgb(254, 255, 246);
+    padding: 0px 38px 0px 38px;
+    transition: all 300ms ease;
+    line-height: 26px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+}
+
+body.dark-mode {
+    background-color: rgb(25, 25, 25);
+    color: white;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background-color: rgb(254, 255, 246);
+    z-index: 1000;
+}
+
+body.dark-mode nav {
+    background-color: rgb(25, 25, 25);
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+nav a, footer a{
+    color: rgb(150, 150, 150);
+    transition: all 300ms ease;
+}
+
+nav a:hover, footer a:hover {
+    color: black;
+}
+body.dark-mode nav a:hover, body.dark-mode footer a:hover {
+    color: white;
+}
+
+.nav-left, .nav-right {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.theme-toggle {
+    cursor: pointer;
+}
+
+main {
+    flex: 1;
+}
+
+.black-fill-button {
+    background-color: black;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 5px;
+    transition: all 300ms ease;
+    border: 2px solid black;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    position: relative;
+}
+
+.black-outline-button {
+    background-color: transparent;
+    border: 2px solid black;
+    padding: 10px 20px;
+    color: black;
+    border-radius: 5px;
+    transition: all 300ms ease;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    position: relative;
+}
+
+.black-fill-button:hover, .black-outline-button:hover, .red-fill-button:hover {
+    transform: translateY(-2px);
+}
+
+.black-outline-button:active, .black-fill-button:active, .red-fill-button:active {
+    opacity: 0.8;
+}
+
+body.dark-mode .black-fill-button {
+    background-color: white;
+    color: black;
+}
+
+body.dark-mode .black-outline-button {
+    border-color: white;
+    color: white;
+}
+
+footer {
+    display: flex;
+    padding: 18px 0px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer div {
+    margin: 5px 0px;
+}
+
+.blue-link {
+    text-decoration: underline;
+    color: blue;
+}
+
+body.dark-mode .blue-link {
+    color: lightblue;
+}
+
+.error-message {
+    border: 2px solid red;
+    background-color: rgb(255, 185, 185);
+    padding: 10px 20px;
+    display: none;
+    border-radius: 5px;
+    color: black;
+}
+
+.success-message {
+    border: 2px solid rgb(18, 212, 0);
+    background-color: rgb(200, 255, 195);
+    padding: 10px 20px;
+    display: none;
+    border-radius: 5px;
+    color: black;
+}
+
+.no-account-buttons {
+    display: none;
+}
+
+.no-account-buttons a {
+    margin: 0px 5px;
+}
+
+.my-account-button {
+    position: relative;
+    display: none;
+    cursor: pointer;
+}
+
+.account-dropdown {
+    position: absolute;
+    top: 45px;
+    right: 0;
+    width: 250px;
+    padding: 15px;
+    background-color: white;
+    border: 1px solid rgb(220, 220, 220);
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    display: none;
+    z-index: 1000;
+}
+
+.user-email {
+    text-align: center;
+    font-size: 18px;
+}
+
+body.dark-mode .user-email {
+    color: black;
+}
+
+.account-dropdown > button, .account-dropdown > a {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 10px 0px;
+}
+
+.red-fill-button {
+    display: inline-block;
+    background-color: rgb(200, 0, 0);
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 5px;
+    transition: all 300ms ease;
+    font-size: 16px;
+    cursor: pointer;
+    border: 2px solid  rgb(200, 0, 0);;
+}
+
+dialog[open] {
+    border: none;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+}
+
+body.dark-mode dialog[open] button {
+    color: black;
+}
+
+.footer-logo {
+    display: none;
+}
+
+.loading-button.loading .spinner {
+    display: block;
+}
+
+.account-loading-button.loading .spinner {
+    display: block;
+}
+
+.loading-button.loading {
+    pointer-events: none;
+    opacity: 0.8;
+}
+
+.account-loading-button.loading {
+    pointer-events: none;
+    opacity: 0.8;
+}
+
+.loading-button.loading .button-content {
+    visibility: hidden;
+}
+
+.account-loading-button.loading .button-content {
+    visibility: hidden;
+}
+
+.spinner {
+    position: absolute;
+    left: 46%;
+    bottom: 25%;
+    display: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid rgba(255,255,255,.3);
+    border-top: 2px solid white;
+    border-radius: 50%;
+    animation: spin .8s linear infinite;
+}
+
+body.dark-mode .spinner {
+    border: 2px solid rgba(255,255,255,.1);
+    border-top: 2px solid black;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        display: none;
+    }
+
+    nav {
+        padding: 0px 30px ;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .footer-logo {
+        display: block;
+    }
+
+    .account-dropdown {
+        right: -120px;
+    }
+}

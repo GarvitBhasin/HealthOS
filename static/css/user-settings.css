@@ -1,0 +1,39 @@
+.account-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+input[type="email"],
+input[type="password"] {
+    padding: 12px 15px;
+    border: 2px solid black;
+    background-color: transparent;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: all 300ms ease;
+}
+
+input::placeholder {
+    color: rgb(150, 150, 150);
+}
+
+input:focus {
+    outline: none;
+    border-color: rgb(100, 100, 100);
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+body.dark-mode .js-verification .red-fill-button {
+    color: white;
+}
+
+body.dark-mode .js-confirmation button {
+    border: 2px solid black;
+}

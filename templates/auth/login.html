@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>HealthOS | Login</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/static/css/general.css">
+        <link rel="stylesheet" href="/static/css/login.css">
+        <link rel="icon" type="image/png" href="/static/images/HealthOS-logo.png">
+    </head>
+    <body>
+        <nav>
+            <div class="nav-left">
+                <img src="/static/images/HealthOS-logo.png" alt="healthos logo" width="55px" height="55px" class="logo">
+                <a href="/">
+                    <div>
+                        Home
+                    </div>
+                </a>
+                <a href="/results">
+                    <div>
+                        Results
+                    </div>
+                </a>
+                <a href="/dashboard">
+                    <div>
+                        Dashboard
+                    </div>
+                </a>
+            </div>
+            <div class="nav-right">
+                <div class="theme-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="moon-icon" viewBox="0 0 16 16">
+                        <path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278M4.858 1.311A7.27 7.27 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.32 7.32 0 0 0 5.205-2.162q-.506.063-1.029.063c-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286"/>
+                    </svg>
+                </div>
+                <a href="/sign-up">
+                    <button class="black-fill-button">
+                        Sign Up
+                    </button>
+                </a>
+                <a href="/login">
+                    <button class="black-outline-button">
+                        Login
+                    </button>
+                </a>
+            </div>
+        </nav>
+        <main>
+            <div class="heading">Login to your account</div>
+            <div class="form-container">
+                <input type="email" placeholder="Email" class="js-email" required>
+                <input type="password" placeholder="Password" class="js-password" required>
+                <div class="form-section">
+                    <div>
+                        <input type="checkbox" id="Remember me" class="remember-me-checkbox">
+                        <label for="Remember me">Remember me?</label>
+                    </div>
+                    <a class="password-reset">Forgot password?</a>
+                </div>
+                <div class="error-message"></div>
+                <div class="success-message"></div>
+                <button class="black-fill-button js-login-button loading-button">
+                    <span class="button-content">Login</span>
+                    <span class="spinner"></span>
+                </button>
+                <span>Don't have an account? <a href="/sign-up" class="blue-link">Register</a></span>
+            </div>
+        </main>
+        <footer>
+            <div>
+                <div>
+                    <a href="https://garvitbhasin.netlify.app" target="_blank">
+                        Garvit Bhasin
+                    </a>
+                </div>
+                <div>
+                    <a href="/faq">
+                        FAQ
+                    </a>
+                </div>
+            </div>
+            <img src="/static/images/HealthOS-logo.png" alt="healthos logo" width="55px" height="55px" class="footer-logo">
+        </footer>
+        <script type="module" src="/static/js/general.js"></script>
+        <script type="module" src="/static/js/login.js"></script>
+    </body>
+</html>

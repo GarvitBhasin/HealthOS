@@ -1,0 +1,22 @@
+.heading {
+    font-size: 40px;
+    font-weight: 600;
+    margin-top: 150px;  
+    margin-bottom: 30px;  
+}
+
+.index-description {
+    margin-right: 60%;
+    margin-bottom: 25px;
+}
+
+@media (max-width: 480px) {
+    .index-description {
+        margin-right: 10%;
+    }
+
+    .heading {
+        margin-top: 120px;
+        line-height: 42px;
+    }
+}

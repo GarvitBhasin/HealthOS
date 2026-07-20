@@ -1,0 +1,158 @@
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 1200px;
+    width: 90%;
+    margin: 100px auto 60px;
+    margin-bottom: 20px;
+}
+
+.results-header {
+    text-align: center;
+}
+
+.overall-score {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.HealthOS-score {
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.overall-score span {
+    font-size: 28px;
+    color: gray;
+}
+
+.confidence {
+    margin-top: 10px;
+    color: gray;
+    font-size: 15px;
+}
+
+.category-breakdown {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
+}
+
+.category-card {
+    border: 1px solid #888;
+    border-radius: 16px;
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: all 200ms ease;
+}
+
+.category-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);;
+}
+
+.category-card h3 {
+    font-size: 22px;
+}
+
+.category-card h4 {
+    font-size: 15px;
+    color: gray;
+    margin: 5px 0px;
+}
+
+.score-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.score-row div {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.progress {
+    height: 10px;
+    background-color: #e5e5e5;
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    width: 0;
+    background-color: black;
+    border-radius: inherit;
+    transition: width 0.5s ease;
+}
+
+body.dark-mode .progress {
+    background-color: #333;
+}
+
+body.dark-mode .progress-fill {
+    background-color: white;
+}
+
+.blindspots,
+.weaknesses {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #666;
+}
+
+body.dark-mode .blindspots,
+body.dark-mode .weaknesses {
+    color: #bbb;
+}
+
+.back {
+    font-size: 14px;
+    color: #888;
+    cursor: pointer;
+    transition: all 200ms ease;
+}
+
+.back:hover {
+    color: black;
+}
+
+body.dark-mode .back {
+    color: rgb(230, 230, 230);
+}
+
+.action-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.action-buttons a {
+    flex: 1 1 0;
+}
+
+@media (max-width: 480px) {
+    main {
+        align-items: center;
+    }
+}

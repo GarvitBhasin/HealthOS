@@ -1,0 +1,85 @@
+.auth-container{
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    min-height:calc(100vh - 150px);
+    padding: 45px 20px 0px 20px;
+    gap: 18px;
+}
+
+.auth-card{
+    width:420px;
+    max-width:100%;
+    padding:40px;
+    text-align:center;
+    border:1px solid #ddd;
+    border-radius:18px;
+    background:rgb(253, 255, 249);
+}
+
+body.dark-mode .auth-card > div {
+    color: black
+}
+
+.email-icon{
+    font-size:64px;
+    margin-bottom:20px;
+}
+
+.auth-card h1{
+    margin-bottom:15px;
+}
+
+.subtitle {
+    margin-bottom:20px;
+    line-height:1.6;
+}
+
+.instructions{
+    color:#555;
+    line-height:1.6;
+}
+
+.small-text{
+    color:#888;
+    font-size:14px;
+    margin:25px 0;
+}
+
+.auth-card button{
+    width:100%;
+    margin-bottom:15px;
+}
+
+body.dark-mode .subtitle, h1 {
+    color: black;
+}
+
+body.dark-mode .auth-card .black-fill-button {
+    background-color: black;
+    color: white;
+}
+
+body.dark-mode .auth-card a .black-outline-button {
+    color: black;
+    border-color: black;
+}
+
+.error-message, .success-message {
+    width: 460px;
+}
+
+#error-occurred, #verification-successful {
+    display: none;
+}
+
+#verification-successful h1 {
+    line-height: 42px;
+}
+
+@media (max-width: 480px) {
+    .error-message, .success-message {
+        width: 100%;
+    }
+}
