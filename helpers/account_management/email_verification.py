@@ -2,6 +2,9 @@ import secrets, hashlib, smtplib
 from email.message import EmailMessage
 from datetime import datetime, timedelta, UTC
 from helpers.data_fetching.connect_db import *
+from dotenv import load_dotenv
+import os
+load_dotenv()
 
 def generate_and_save_token(user_email, connection, cursor):
     token = secrets.token_urlsafe(32)
@@ -356,7 +359,7 @@ def send_reset_email(user_email, token):
     smtp.starttls() # encrypt using TLS
     smtp.login(
         "healthos.platform@gmail.com",
-        "psxt zyid bfqx ygms"
+        os.getenv("SMTP_PASSWORD")
     )
 
     # Send email

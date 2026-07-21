@@ -1,6 +1,8 @@
 from flask import Flask, render_template, jsonify, request, redirect
 from flask import session
+from dotenv import load_dotenv
 from datetime import timedelta, datetime
+import os
 import json
 from helpers.data_fetching.connect_db import *
 from helpers.data_fetching.recieve_data import *
@@ -11,9 +13,10 @@ from helpers.account_management.delete import *
 from helpers.account_management.email_verification import *
 from helpers.assessment_logic.assessment import *
 from helpers.assessment_logic.algorithm import *
+load_dotenv()
 
 app = Flask(__name__)
-app.config["SECRET_KEY"] = "some-long-random-string"
+app.config["SECRET_KEY"] = os.getenv("SECRET_KEY")
 app.config["PERMANENT_SESSION_LIFETIME"] = timedelta(days=4)
  
 # --- ACCOUNT MANAGEMENT --- #
@@ -557,4 +560,4 @@ def server_error(error):
     return render_template("errors/500.html"), 500
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=8000, debug=True)
+    app.run()
