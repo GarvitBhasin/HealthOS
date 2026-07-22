@@ -1,0 +1,16 @@
+CREATE TABLE users (
+  user_id INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+  email TEXT UNIQUE NOT NULL,
+  password_hash TEXT UNIQUE NOT NULL,
+  creation_date DATE DEFAULT CURRENT_DATE NOT NULL,
+  is_verified BOOLEAN DEFAULT FALSE NOT NULL,
+  verification_token_hash TEXT UNIQUE,
+  token_expiry TIMESTAMPTZ
+);
+
+CREATE TABLE assessments (
+  id INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+  user_id INT UNIQUE NOT NULL,
+  results_json JSON NOT NULL,
+  FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE
+);
