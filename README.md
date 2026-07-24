@@ -113,5 +113,8 @@ Future planned updates include adding features:
 - Introduction of `dashboard.html` and `consultation.html`
 - Adding a rate limiter to login, signup and email verifications.
 
+## AI Assistance
+A substantial portion of development and implimentation of this project was carried out by me. AI tools including ChatGPT and Gemini were used by me to help me through multiple processes such as debugging both frontend and backend bugs, explaining unfamiliar concepts, exploring alternative implementations, improving documentation, and assisting in developing basic HTML and CSS code. All application architecture, implementation decisions, code integration, testing, and final verification were performed by me.
+
 ## Disclaimer
 HealthOS is an educational software project and is not intended to provide medical diagnoses or replace professional medical advice.
