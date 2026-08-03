@@ -87,7 +87,7 @@ python3 backend.py
 ```
 ## What I Learnt
 I learnt many new useful concepts while developing this project; however, I didn't just learn them conceptually, I also constantly applied them. Some of these things include:
-- REST API development and HTTP codes
+- JWTs, REST API development, and HTTP codes
 - Password and token hashing (bcrypt and sha256)
 - Writing complex javascript code:
   - Input validation and error handling
