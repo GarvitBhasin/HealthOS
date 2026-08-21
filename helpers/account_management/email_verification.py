@@ -187,7 +187,7 @@ def send_verification_email(user_email, token):
     smtp.starttls() # encrypt using TLS
     smtp.login(
         "healthos.platform@gmail.com",
-        "psxt zyid bfqx ygms"
+        os.getenv("SMTP_PASSWORD")
     )
 
     # Send email
